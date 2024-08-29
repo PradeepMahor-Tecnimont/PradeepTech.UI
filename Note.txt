@@ -31,3 +31,65 @@ Or add them to your angular.json so you can run ng serve as normal:
 },
 
 ------------------------------------------------------------------------------------------------------------------------------------------------
+Add material
+
+-> ng add @angular/material
+
+✔ Determining Package Manager
+  › Using package manager: npm
+✔ Searching for compatible package version
+  › Found compatible package version: @angular/material@18.2.2.
+✔ Loading package information from registry
+✔ Confirming installation
+✔ Installing package
+? Choose a prebuilt theme name, or "custom" for a custom theme: Azure/Blue         [Preview: https://material.angular.io?theme=azure-blue]
+? Set up global Angular Material typography styles? no
+? Include the Angular animations module? Include and enable animations
+UPDATE package.json (1142 bytes)
+✔ Packages installed successfully.
+UPDATE src/app/app.config.ts (446 bytes)
+UPDATE angular.json (3221 bytes)  
+UPDATE src/index.html (515 bytes) 
+UPDATE src/styles.scss (182 bytes)
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Add Tailwind css
+
+-> npm install -D tailwindcss postcss autoprefixer
+-> npx tailwindcss init
+
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{html,ts}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Install extention 
+
+> TailwindCSS Kit
+> Angular Language Service
+> Auto Rename Tag
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------
