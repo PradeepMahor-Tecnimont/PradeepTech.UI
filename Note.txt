@@ -1,0 +1,33 @@
+
+// For SSL
+npm install browser-sync --save-dev
+ng serve --ssl true --ssl-key ./node_modules/browser-sync/certs/server.key --ssl-cert ./node_modules/browser-sync/certs/server.crt
+
+npx office-addin-dev-certs install --days 365
+
+------------------------------------------------------------------------------------------------------------------------------------------------
+
+Run this command to generate the certs and click "Yes" to trust them when it prompts you:
+
+    npx office-addin-dev-certs install --days 365
+
+The generated certs (localhost.crt and localhost.key) will be in your home folder ~\.office-addin-dev-certs
+Copy them to your angular project: cp ~\.office-addin-dev-certs\localhost.* .
+Feed the certs to angular:
+Run ng serve --ssl --ssl-key localhost.key --ssl-cert localhost.crt
+Or add them to your angular.json so you can run ng serve as normal:
+
+"serve": {
+    "builder": "@angular-devkit/build-angular:dev-server",
+    "configurations": {
+        "development": {
+            "browserTarget": "blank16:build:development",
+            "ssl": true,
+            "sslKey": "localhost.key",
+            "sslCert": "localhost.crt"
+        }
+    },
+    "defaultConfiguration": "development"
+},
+
+------------------------------------------------------------------------------------------------------------------------------------------------

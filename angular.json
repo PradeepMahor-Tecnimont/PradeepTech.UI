@@ -67,7 +67,10 @@
               "buildTarget": "PradeepTech.UI:build:production"
             },
             "development": {
-              "buildTarget": "PradeepTech.UI:build:development"
+              "buildTarget": "PradeepTech.UI:build:development",
+              "ssl": true,
+              "sslKey": "localhost.key",
+              "sslCert": "localhost.crt"
             }
           },
           "defaultConfiguration": "development"
